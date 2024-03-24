@@ -1,0 +1,75 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PasajeBusWeb
+build_property.RootNamespace = PasajeBusWeb
+build_property.ProjectDir = C:\test\SistemaBoletosBus\PasajeBusWeb\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\test\SistemaBoletosBus\PasajeBusWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Acceso/Denegado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXERlbmVnYWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Acceso/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Acceso/Registrarse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXFJlZ2lzdHJhcnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Bus/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Ruta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUnV0YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Viaje/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlhamVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Viaje/MisViajes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlhamVcTWlzVmlhamVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/test/SistemaBoletosBus/PasajeBusWeb/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-hmr97puh8u

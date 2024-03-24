@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-center">Inicio de Sesión</h5>
+                <form asp-controller="Acceso" asp-action="Login" method="post">
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="Correo" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="Clave" required>
+                    </div>
+                    @if (ViewData["Mensaje"] != null)
+                    {
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <div class="alert alert-danger" role="alert">
+                                    @ViewData["Mensaje"]
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <button type="submit" class="btn btn-primary d-block mx-auto">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

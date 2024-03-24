@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section Estilos {
+    <link href="~/lib/datatables/css/datatables.datatables.css" rel="stylesheet" />
+}
+<div class="card border-info">
+    <div class="card-header bg-info text-white">
+        <h5>Rutas</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <button class="btn btn-outline-success" id="btnNuevo">
+                    <i class="fa-solid fa-plus"></i>
+                    Crear nuevo
+                </button>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="display" id="tbData" cellspacing="0" style="width:100%">
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="mdData" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary text-white">
+                <h5 class="modal-title" id="staticBackdropLabel">Ruta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Origen:</label>
+                        <input type="text" class="form-control" id="txtOrigen" autocomplete="off">
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Destino:</label>
+                        <input type="text" class="form-control" id="txtDestino" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-circle-xmark"></i> Cerrar</button>
+                <button type="button" class="btn btn-primary" id="btnGuardar"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/datatables/js/moment.min.js"></script>
+    <script src="~/lib/datatables/js/datatables.js"></script>
+    <script src="~/views/ruta.js"></script>
+}

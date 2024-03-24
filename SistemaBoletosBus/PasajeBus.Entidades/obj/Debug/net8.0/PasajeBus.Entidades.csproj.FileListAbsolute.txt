@@ -1,0 +1,11 @@
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\bin\Debug\net8.0\PasajeBus.Entidades.deps.json
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\bin\Debug\net8.0\PasajeBus.Entidades.dll
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\bin\Debug\net8.0\PasajeBus.Entidades.pdb
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\obj\Debug\net8.0\PasajeBus.Entidades.GeneratedMSBuildEditorConfig.editorconfig
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\obj\Debug\net8.0\PasajeBus.Entidades.AssemblyInfoInputs.cache
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\obj\Debug\net8.0\PasajeBus.Entidades.AssemblyInfo.cs
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\obj\Debug\net8.0\PasajeBus.Entidades.csproj.CoreCompileInputs.cache
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\obj\Debug\net8.0\PasajeBus.Entidades.dll
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\obj\Debug\net8.0\refint\PasajeBus.Entidades.dll
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\obj\Debug\net8.0\PasajeBus.Entidades.pdb
+E:\WorkSpaceAD\YOUTUBE\117 Sistema de Reserva de Boletos de Autobús NET 8\SistemaBoletosBus\PasajeBus.Entidades\obj\Debug\net8.0\ref\PasajeBus.Entidades.dll

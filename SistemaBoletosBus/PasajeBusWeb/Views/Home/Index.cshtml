@@ -1,0 +1,189 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@section Estilos {
+    <link href="~/lib/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="~/lib/select2/css/select2-bootstrap-5-theme.min.css" rel="stylesheet" />
+    <link href="~/lib/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <style>
+        .asientos{
+            width:40px;
+            height:40px;
+            cursor: pointer;
+        }
+
+        .asientos_reservados {
+            width: 40px;
+            height: 40px;
+        }
+
+        #tbPiso1, #tbPiso2 {
+            border-collapse: separate;
+            border-spacing: 0 1em;
+        }
+        h6{
+            margin:0px !important;
+        }
+    </style>
+}
+
+<div class="card mt-3 card-paso1">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-12"><h2>Seleccione su viaje</h2></div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col-sm-3">
+                <label class="col-form-label">Origen:</label>
+                <select id="cboOrigen" class="form-select data-in" data-width="100%" name="Bus"></select>
+            </div>
+            <div class="col-sm-3">
+                <label class="col-form-label">Destino:</label>
+                <select id="cboDestino" class="form-select data-in" data-width="100%" name="Bus"></select>
+            </div>
+            <div class="col-sm-3">
+                <label class="col-form-label">Fecha Salida:</label>
+                <input type="text" class="form-control data-in" id="txtFechaSalida" name="FechaSalida" autocomplete="off">
+            </div>
+            <div class="col-sm-3 align-items-end">
+                
+                <div class="d-grid gap-1">
+                <button class="btn btn-primary" type="button" id="btnBuscar"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card mt-3 card-paso1" id="cardEncontrados" style="display: none;">
+    <div class="card-body">
+        <div class="row ">
+            <div class="col-sm-12"><h2>Viajes encontrados</h2></div>
+        </div>
+        <hr />
+        <div id="cnEncontrados" class="row row-cols-md-4 row-cols-sm-2">
+           
+        </div>
+    </div>
+</div>
+
+
+<div class="card mt-3 card-paso2" style="display: none;">
+    <div class="card-body">
+        <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h5 class="card-title"><span id="spOrigenDestino"></span></h5>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Fecha: <span id="spFechaSalida"></span> </h5>
+                        <p class="card-text">Hora: <span id="spHoraSalida"></span><br />Precio: <span id="spPrecio"></span> </p>
+                        <p class="card-text">*Seleccione asientos*</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" id="divPiso1">
+                <div class="border border-primary rounded p-3" style="width:200px;margin: auto; position: relative;" >
+                    <h6>Primer Piso</h6>
+                    <table id="tbPiso1">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-4" id="divPiso2">
+                <div class="border border-primary rounded p-3" style="width:200px;margin: auto; position: relative;" >
+                    <h6>Segundo Piso</h6>
+                    <table id="tbPiso2">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-end">
+        <button class="btn btn-secondary me-2" id="btnRegresar">Regresar</button>
+        <button class="btn btn-primary" id="bntContinuar">Continuar</button>
+    </div>
+
+</div>
+
+
+<div id="mdReserva" class="modal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Reserva</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <input type="email" class="form-control input-reserva" id="txtNombreCompleto" placeholder="Nombre completo" name="Nombre_Completo" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control input-reserva" id="txtApellidoCompleto" placeholder="Apellido completo" name="Apellido_Completo" disabled>
+                        </div>
+                      
+                        <div class="mb-3">
+                            <input type="email" class="form-control input-reserva" id="txtCorreo" placeholder="Correo" name="Correo" disabled>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Asientos:</span>
+                                    <input type="text" class="form-control" id="txtNroAsientos" disabled>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Total:</span>
+                                    <input type="text" class="form-control" id="txtMontoTotal" disabled>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-credit-card"></i></span>
+                            <input type="text" class="form-control input-reserva" id="txtNumeroTarjeta" placeholder="Numero de tarjeta" name="Numero_Tarjeta">
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-calendar-days"></i></span>
+                                    <input type="text" class="form-control input-reserva" id="txtMesAnio" placeholder="MM/AA" name="Fecha_Expiracion">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon2"><i class="fa-regular fa-hard-drive"></i></span>
+                                    <input type="text" class="form-control input-reserva" id="txtCodigo" placeholder="CVV" name="Codigo_Seguridad">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/select2/js/select2.min.js"></script>
+    <script src="~/lib/moment/moment.min.js"></script>
+    <script src="~/lib/jquery-ui/jquery-ui.js"></script>
+    <script src="~/lib/jquery-ui/datepicker/language/datepicker-es.js"></script>
+    <script src="~/lib/jquery-mask/jquery.mask.js"></script>
+    <script src="~/views/home.js"></script>
+}

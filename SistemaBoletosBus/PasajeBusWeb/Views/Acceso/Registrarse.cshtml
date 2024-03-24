@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-center">Registrarse</h5>
+                @if (ViewBag.Creado == null)
+                {
+                    <form asp-controller="Acceso" asp-action="Registrarse" method="post">
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" name="Nombres" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Apellido Completo</label>
+                            <input type="text" class="form-control" name="Apellidos" id="inputEmail" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" name="Correo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" name="Clave" aria-describedby="emailHelp">
+                        </div>
+                        @if (ViewBag.Mensaje != null)
+                        {
+                            <div class="alert alert-danger">
+                                @ViewBag.Mensaje
+                            </div>
+                        }
+                        <button type="submit" class="btn btn-primary d-block mx-auto">Registrarse</button>
+                    </form>
+                }
+                else
+                {
+                    <div class="alert alert-success">
+                        <p>@ViewBag.Mensaje</p>
+                    </div>
+                }
+
+            </div>
+            <div class="card-footer text-center py-3">
+                <div class="small"><a asp-controller="Acceso" asp-action="Login">Ya tienes una cuenta? Acceder</a></div>
+            </div>
+        </div>
+    </div>
+</div>

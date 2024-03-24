@@ -1,0 +1,76 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section Estilos {
+    <link href="~/lib/datatables/css/datatables.datatables.css" rel="stylesheet" />
+    <link href="~/lib/datatables/fixedcolumns/css/fixedcolumns.datatables.css" rel="stylesheet" />
+}
+<div class="card border-info">
+    <div class="card-header bg-info text-white">
+        <h5>Buses</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <button class="btn btn-outline-success" id="btnNuevo">
+                    <i class="fa-solid fa-plus"></i> 
+                    Crear nuevo</button>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="tbData" cellspacing="0" style="width:100%" class="stripe row-border order-column">
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="mdData" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary text-white">
+                <h5 class="modal-title" id="staticBackdropLabel">Bus</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Nro Placa:</label>
+                        <input type="text" class="form-control" id="txtNumeroPlaca" autocomplete="off">
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="txtNombre" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Capacidad piso 1:</label>
+                        <input type="number" class="form-control" id="txtCapacidadPiso1" autocomplete="off" min="0" max="15" value="0">
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Capacidad piso 2:</label>
+                        <input type="number" class="form-control" id="txtCapacidadPiso2" autocomplete="off" min="0" max="15" value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-circle-xmark"></i> Cerrar</button>
+                <button type="button" class="btn btn-primary" id="btnGuardar"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/datatables/js/moment.min.js"></script>
+    <script src="~/lib/datatables/js/datatables.js"></script>
+    
+    <script src="~/lib/datatables/fixedcolumns/js/datatables.fixedcolumns.js"></script>
+    <script src="~/lib/datatables/fixedcolumns/js/fixedcolumns.datatables.js"></script>
+    <script src="~/views/bus.js"></script>
+}
